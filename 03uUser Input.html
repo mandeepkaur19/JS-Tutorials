@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Greetings Website!</h1>
+<label>Hey there! what's your name?</label>
+<input id='name' />
+<button onclick="showGreeting()">Greet me!</button>
+<button onclick="showGoodMoring()">Good Morning</button>
+<button onclick="showGoodEvening()">Good Evening</button>
+<script>
+	function showGreeting(){
+		var user_name = document.getElementById('name').value
+		var custom_greeting = "Good Evening " + user_name 
+		alert(custom_greeting)
+	}
+</script>
+<script>
+	function showGoodMoring(){
+		var user_name = document.getElementById('name').value
+		var custom_greeting = "Good Morning " + user_name 
+		alert(custom_greeting)
+	}
+</script>
+<script>
+	function showGoodEvening(){
+		var user_name = document.getElementById('name').value
+		var custom_greeting = "Good Evening " + user_name 
+		alert(custom_greeting)
+	}
+</script>
+</body>
+</html>    
