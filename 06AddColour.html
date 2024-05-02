@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id='color-dropdown'>
+        <option>lightblue</option>
+        <option>blue</option>
+        <option>green</option>
+        <option>yellow</option>
+        <option>gold</option>
+        <option>white</option>
+    </select>
+    <div style="border: 2px solid green" id='box-canvas'>
+    </div>
+    
+    <script>
+        function paintTheBox(box_id){
+            var color = document.getElementById('color-dropdown').value;
+            document.getElementById(box_id).style.backgroundColor = color;
+        }
+    
+        var canvas = document.getElementById('box-canvas')
+    
+        for(var i=1; i<=1000; i++){
+            var box = document.createElement('div');
+            box.setAttribute('class', 'box');
+            box.setAttribute('id', 'box' + i);
+            box.setAttribute('onclick', "paintTheBox('box" + i + "')");
+    
+            canvas.appendChild(box);
+        }
+    
+    </script>
+    <style>
+    .box {
+        height: 20px; 
+        width: 20px;
+        border: 1px solid black;
+        display: inline-block;
+    }
+    </style>
+</body>
+</html>
